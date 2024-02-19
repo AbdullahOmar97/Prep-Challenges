@@ -38,14 +38,18 @@
 //
 // Output: 5
 
+//array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
 const objectCounter = (obj) => {
 
+    const count = obj.reduce((sum, currentIndex) => {
 
-      
-        return count;
+        return sum + 1
 
+    }, 0);
 
-      }
+    return count ;
+};
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -66,11 +70,13 @@ const objectCounter = (obj) => {
 
 const stringReverse = (str) => {
 
+    return str.split(' ').reduce((reversed, word) => {
 
-    }
+        return word + ' ' + reversed;
 
-
-
+    }, '').trim();
+    
+}
 
 // -------------------------------------------------------------------------------------------------------
 
