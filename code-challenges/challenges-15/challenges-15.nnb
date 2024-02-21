@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function equalizeArray(arr) {\n\n    const elementCount = {};\n    \n    arr.forEach(element => {\n        \n        elementCount[element] = (elementCount[element] || 0) + 1;\n    });\n\n    let maxNum = 0;\n    for (const key in elementCount) {\n        \n        if (elementCount[key] > maxNum) {\n            \n            maxNum = elementCount[key];\n        }\n    }\n\n    const minNum = arr.length - maxNum;\n\n    return minNum;\n\n}"
             ],
             "outputs": []
         },
